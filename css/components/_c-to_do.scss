@@ -1,0 +1,131 @@
+$list: "c-to-do-list";
+$c: "c-to_do";
+$scope: "c-to_do__scope";
+$def: "c-to_do__def";
+$mark: "c-to_do__checkmark";
+$check: "c-to_do__check";
+$label: "c-to_do__label";
+$input: "c-to-do__input";
+$to_do_height: 3rem;
+
+
+.#{$list}{
+    display: grid;
+    gap:1em; 
+}
+
+.#{$c}{
+    position: relative;
+    height: $to_do_height;
+    border-radius: 3px;
+    overflow: hidden;
+
+    line-height: 1em;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    background-color: $dark_grey
+}
+
+.#{$scope}{
+    transition: 0.3s ease-in-out;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding-left: $to_do_height;
+
+    position: absolute;
+    left: -$to_do_height;
+    /* background-color: $mid_grey; */
+    & i{
+        position: absolute;
+        left: 0;
+        line-height: 1em;
+        width: $to_do_height;
+        height: $to_do_height;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $mid_grey;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        color: $off-white;
+        &:hover{
+            font-size: 1.2em;
+            color: $white;
+        }
+    }
+
+    &.checked{
+        left: 0;
+    }
+}
+.#{$def}{
+    margin-left: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.#{$check}{
+    -webkit-appearance: none;
+	background-color: $light_grey;
+	padding: 0.5em;
+    margin: 1em;
+	border-radius: 2px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out ;
+    &:before{
+        content: "";
+        width: $to_do_height;
+        height: $to_do_height;
+        background: transparent;
+        position: absolute;
+        top: -1.5em;
+        left: -1.5em;
+    }
+    &:hover{
+        padding: 0.6em;
+        margin: 0.9em;
+        background-color: $off-white;
+    }
+}
+
+.#{$check}:checked{
+    background-color: $darker_grey;
+    &:hover{
+        padding: 0.5em;
+        margin: 1em;
+    }
+}
+.#{$check}:checked:after {
+	content: '\2714';
+	font-size: 1em;
+	position: absolute;
+    top:-3px;
+    left:2px;
+	color: #89ff89;
+    
+}
+
+
+.#{$input}{
+    margin-top: 1em;
+    display: none;
+    width: 100%;
+    height: $to_do_height;
+    border-radius: 3px;
+    overflow: hidden;
+    line-height: 1em;
+    border: none;
+    background: $dark_grey;
+    color: $white;
+    padding:1em;
+    outline: 1px solid $light_grey;
+    font-size: 1rem;
+    &::placeholder{
+        color:$light_grey;
+    }
+}
+

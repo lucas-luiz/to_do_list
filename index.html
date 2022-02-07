@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas' To do List</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://kit.fontawesome.com/c941ba5904.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="wrapper">
+    <header class="l-header">
+        <h3>Things you better start doing</h3>
+    </header>
+
+
+    <main class="l-main">
+        <div class="c-to-do-list">
+            
+        </div>
+        <a class='c-main__new-task' onclick="focusOn()">+ New task</a>
+        <input type="text" class="c-to-do__input" placeholder="Insert your new task" autofocus onfocusout="focusOut()" >
+            </input>
+        
+    </main>
+
+
+    <footer class="l-footer">
+        <span class="c-footer__credits">?</span>
+        <h4 class="c-footer__title">Check out my other projects</h4>
+        <div class="c-footer__social">
+            <ul>
+                <a href="https://github.com/lucas-luiz" target="_blank"><li><i class="fab fa-github-square"></i></li></a>
+                <a href="#"><li><i class="fab fa-instagram"></i></li></a>
+            </ul>
+        </div>
+    </footer>
+    <script type="text/javascript" src="require.js"></script>
+    <script type="text/javascript" src="toDoRender.js"></script>
+    <script type="text/javascript" src="toDoCreate.js"></script>
+</div>
+</body>
+</html>

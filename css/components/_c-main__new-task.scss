@@ -1,0 +1,13 @@
+$c: 'c-main__new-task';
+.#{$c}{
+    display: block;
+    width: fit-content;
+    padding: 1em;
+    font-size: 0.8rem;
+    color: $light_grey;
+    font-weight: bolder;
+    cursor: pointer;
+    &:hover{
+        color: $off_white;
+    }
+}

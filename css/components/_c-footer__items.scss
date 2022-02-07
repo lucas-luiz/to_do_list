@@ -1,0 +1,40 @@
+$credits: "c-footer__credits";
+$projects: "c-footer__projects";
+$social: "c-footer__social";
+$title: "c-footer__title";
+
+footer > *{
+    text-align: center;
+    /* padding: 0.5rem; */
+}
+.#{$credits}{
+    padding: 0;
+    color: $lighter_grey;
+    font-weight: bolder;
+    text-align: center;
+    
+}
+.#{$projects}{
+    
+}
+.#{$social}{
+    & ul{
+        display: flex;
+        gap: 1em;
+        width: 100%;
+        justify-content: center;
+    }
+    & ul li{
+        display: inline;
+    }
+    a{
+        color: $off-white;
+        &:hover{
+            color: $white;
+        }
+    }
+}
+.#{$title}{
+    text-align: center;
+    
+}

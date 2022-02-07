@@ -1,0 +1,337 @@
+/* $lighter_grey: #e6c868;
+$light_grey: #42474D;
+$mid_grey: #312F51;
+$dark_grey: #292841;
+$darker_grey: #1C1B29;
+$white: #f8f8f8; */
+body, body * {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+  list-style: none;
+}
+
+body {
+  background-color: #18191D;
+  color: #f8f8f8;
+}
+
+.wrapper {
+  background-color: #212226;
+  /* padding: 1rem 1rem; */
+  width: 100%;
+  height: 100vh;
+  -webkit-box-shadow: 0px 0px 20px -5px #111;
+          box-shadow: 0px 0px 20px -5px #111;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "hd" "mn";
+  -ms-grid-rows: 7rem auto;
+      grid-template-rows: 7rem auto;
+}
+
+@media screen and (min-width: 600px) {
+  .wrapper {
+    width: 400px;
+    height: calc(100vh - 3rem);
+    margin: 1.5rem auto;
+    border-radius: 20px;
+  }
+}
+
+.l-header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: hd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.l-main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: mn;
+  background-color: #18191D;
+  border-radius: 40px 40px 0 0;
+  border-top: 2em solid #18191D;
+  /* display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end; */
+  /* background-color: $mid_grey; */
+  padding: 0 2rem 2rem 2rem;
+  overflow-y: auto;
+  /* &::after{
+        content: "";
+        background-color: $darker_grey;
+        width: 100%;
+        height: 2em;
+        position: absolute;
+        top: 0;
+        left: 0;
+    } */
+}
+
+.l-main::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+.l-main::-webkit-scrollbar-track {
+  background-color: #18191D;
+  margin: 2em;
+  position: absolute;
+}
+
+.l-main::-webkit-scrollbar-thumb {
+  background-color: #212226;
+  border: 0.1em solid #18191D;
+  border-radius: 1em;
+}
+
+.l-footer {
+  background-color: #18191D;
+  position: absolute;
+  bottom: -4rem;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  width: 100%;
+  height: 6rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1em;
+  -ms-grid-rows: (1fr)[auto-fill];
+      grid-template-rows: repeat(auto-fill, 1fr);
+}
+
+.l-footer:hover {
+  bottom: 0;
+}
+
+footer > * {
+  text-align: center;
+  /* padding: 0.5rem; */
+}
+
+.c-footer__credits {
+  padding: 0;
+  color: #4F535C;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.c-footer__social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.c-footer__social ul li {
+  display: inline;
+}
+
+.c-footer__social a {
+  color: #7c7e85;
+}
+
+.c-footer__social a:hover {
+  color: #f8f8f8;
+}
+
+.c-footer__title {
+  text-align: center;
+}
+
+.c-to-do-list {
+  display: -ms-grid;
+  display: grid;
+  gap: 1em;
+}
+
+.c-to_do {
+  position: relative;
+  height: 3rem;
+  border-radius: 3px;
+  overflow: hidden;
+  line-height: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #212226;
+}
+
+.c-to_do__scope {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 3rem;
+  position: absolute;
+  left: -3rem;
+  /* background-color: $mid_grey; */
+}
+
+.c-to_do__scope i {
+  position: absolute;
+  left: 0;
+  line-height: 1em;
+  width: 3rem;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #303136;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  color: #7c7e85;
+}
+
+.c-to_do__scope i:hover {
+  font-size: 1.2em;
+  color: #f8f8f8;
+}
+
+.c-to_do__scope.checked {
+  left: 0;
+}
+
+.c-to_do__def {
+  margin-left: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.c-to_do__check {
+  -webkit-appearance: none;
+  background-color: #42474D;
+  padding: 0.5em;
+  margin: 1em;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.c-to_do__check:before {
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  position: absolute;
+  top: -1.5em;
+  left: -1.5em;
+}
+
+.c-to_do__check:hover {
+  padding: 0.6em;
+  margin: 0.9em;
+  background-color: #7c7e85;
+}
+
+.c-to_do__check:checked {
+  background-color: #18191D;
+}
+
+.c-to_do__check:checked:hover {
+  padding: 0.5em;
+  margin: 1em;
+}
+
+.c-to_do__check:checked:after {
+  content: '\2714';
+  font-size: 1em;
+  position: absolute;
+  top: -3px;
+  left: 2px;
+  color: #89ff89;
+}
+
+.c-to-do__input {
+  margin-top: 1em;
+  display: none;
+  width: 100%;
+  height: 3rem;
+  border-radius: 3px;
+  overflow: hidden;
+  line-height: 1em;
+  border: none;
+  background: #212226;
+  color: #f8f8f8;
+  padding: 1em;
+  outline: 1px solid #42474D;
+  font-size: 1rem;
+}
+
+.c-to-do__input::-webkit-input-placeholder {
+  color: #42474D;
+}
+
+.c-to-do__input:-ms-input-placeholder {
+  color: #42474D;
+}
+
+.c-to-do__input::-ms-input-placeholder {
+  color: #42474D;
+}
+
+.c-to-do__input::placeholder {
+  color: #42474D;
+}
+
+.c-main__new-task {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1em;
+  font-size: 0.8rem;
+  color: #42474D;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.c-main__new-task:hover {
+  color: #7c7e85;
+}
+/*# sourceMappingURL=index.css.map */
