@@ -1,3 +1,6 @@
+//mobile fix
+document.querySelector(".wrapepr").style.height = window.innerHeight
+
 
 const input = document.querySelector(".c-to-do__input")
 const listHtml = document.querySelector(".c-to-do-list")

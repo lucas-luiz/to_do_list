@@ -1,12 +1,12 @@
 body{
     background-color: $darker_grey;
-    color: $white;    
+    color: $white; 
 }
 .wrapper{
     background-color: $dark_grey;
     /* padding: 1rem 1rem; */
     width: 100%;
-    height: 100%;
+    height: 100vh;
     box-shadow: 0px 0px 20px -5px #111;
     overflow: hidden;
     display: grid;
@@ -18,6 +18,7 @@ body{
     @include breakpoint(desktop){
         width: $global_max_width;
         height: calc(100vh - 3rem);
+        
         margin:  1.5rem auto;
         border-radius: 20px;
     }
