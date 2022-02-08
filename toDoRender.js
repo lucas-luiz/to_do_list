@@ -1,5 +1,4 @@
-//mobile fix
-document.querySelector(".wrapepr").style.height = window.innerHeight
+
 
 
 const input = document.querySelector(".c-to-do__input")

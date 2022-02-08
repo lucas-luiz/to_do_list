@@ -37,7 +37,7 @@ $footer-height:6rem;
         background-color: $dark_grey;
         border: 0.1em solid  $darker_grey;
         border-radius: 1em;
-    }
+    } 
     /* &::after{
         content: "";
         background-color: $darker_grey;
@@ -51,7 +51,7 @@ $footer-height:6rem;
 }
 .#{$ft}{
     background-color: $darker_grey;
-    position: absolute;
+    position: fixed;
     bottom: -$footer-height +2rem;
     transition: 0.3s ease-in-out;
     width: 100%;
@@ -63,5 +63,8 @@ $footer-height:6rem;
     grid-template-rows:repeat(auto-fill, 1fr) ;
     &:hover{
         bottom: 0;
+    }
+    @include breakpoint(desktop){
+        position: absolute;
     }
 }
