@@ -16,13 +16,12 @@
 
 
     <main class="l-main">
-        <div class="c-to-do-list">
-            
+        <div class="c-to-do-list">   
         </div>
         <a class='c-main__new-task' onclick="focusOn()">+ New task</a>
-        <input type="text" class="c-to-do__input" placeholder="Insert your new task" autofocus onfocusout="focusOut()" >
-            </input>
-        
+        <form>
+        <input type="text"  class="c-to-do__input"  placeholder="Insert your new task" autofocus onfocusout="focusOut()" onkeyup="verifyText()">        
+        </form>
     </main>
 
 
@@ -37,7 +36,6 @@
         </div>
     </footer>
     <script type="text/javascript" src="toDoRender.js"></script>
-    <script type="text/javascript" src="toDoCreate.js"></script>
 </div>
 </body>
 </html>

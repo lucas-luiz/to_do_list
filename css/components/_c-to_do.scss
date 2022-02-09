@@ -127,5 +127,8 @@ $to_do_height: 3rem;
     &::placeholder{
         color:$light_grey;
     }
+    &:invalid{
+        outline: 1px solid darkred;
+    }
 }
 
