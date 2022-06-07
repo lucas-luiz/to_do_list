@@ -38,6 +38,7 @@ if (localStorage.list) {
 }
 
 if (arrTasks.length > 0) {
+    console.log("draw")
     draw()
 }
 

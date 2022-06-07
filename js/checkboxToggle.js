@@ -1,5 +1,5 @@
 function checkboxToggle(id, content, element) {
-    if (element.checked) {
+    if (element.checked == true) {
         arrTasks.map(e => {
             if (e.def == content) {
                 e.checked = "true"
@@ -9,6 +9,7 @@ function checkboxToggle(id, content, element) {
         console.log(document.querySelector(`.c-to_do__scope#${id}`) + "  sdfasdfsa")
         document.querySelector(`.c-to_do__scope#${id}`).className += " checked"
     } else {
+        console.log("jshjhfdgs")
         arrTasks.map(e => {
             if (e.def == content) {
                 e.checked = "false"
